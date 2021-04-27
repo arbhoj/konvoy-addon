@@ -29,4 +29,4 @@ spec:
     repo: https://raw.githubusercontent.com/arbhoj/helm-images/master/custom-helm-charts/
     version: 0.1.0
     values: |
-      test: this
+      team: testthis
