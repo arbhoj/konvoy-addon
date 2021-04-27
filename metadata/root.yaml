@@ -1,27 +1,3 @@
-elastic:
-  display_name: Elastic
-  description: Elastic
-  logo: elastic/elastic.png
-  category: logs
-  overview: elastic/overview.md
-  resources:
-    links:
-      - type: support
-        title: Support Resources
-        link: https://www.d2iq.com
-
-kibana:
-  display_name: Kibana
-  description: Kibana
-  logo: kibana/kibana.png
-  category: logs
-  overview: kibana/overview.md
-  resources:
-    links:
-      - type: support
-        title: Support Resources
-        link: https://www.d2iq.com
-
 smb-csi-driver:
   display_name: csi-driver-smb
   description: Driver for mounting SMB shared to PODs
