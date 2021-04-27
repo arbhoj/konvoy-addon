@@ -21,3 +21,15 @@ kibana:
       - type: support
         title: Support Resources
         link: https://www.d2iq.com
+
+smb-csi-driver:
+  display_name: smb-csi-driver
+  description: Driver for mounting SMB shared to PODs
+  logo: smb-csi-driver/smb.png
+  category: volume
+  overview: smb-csi-driver/overview.md
+  resources:
+    links:
+      - type: support
+        title: Support Resources
+        link: https://github.com/kubernetes-csi/csi-driver-smb

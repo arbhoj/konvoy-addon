@@ -1,0 +1,32 @@
+---
+apiVersion: kubeaddons.mesosphere.io/v1beta1
+kind: Addon
+metadata:
+  name: csi-driver-smb
+  namespace: kube-system
+  labels:
+    kubeaddons.mesosphere.io/name: csi-driver-smb
+    # TODO: we're temporarily supporting dependency on an existing default storage class
+    # on the cluster, this hack will trigger re-queue on Addons until one exists
+    kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
+  annotations:
+    catalog.kubeaddons.mesosphere.io/addon-revision: "1.0.1-1"
+    appversion.kubeaddons.mesosphere.io/csi-driver-smb: "1.0.1"
+    values.chart.helm.kubeaddons.mesosphere.io/csi-driver-smb: "https://raw.githubusercontent.com/kubernetes-csi/csi-driver-smb/master/charts/v0.6.0/csi-driver-smb/values.yaml"
+spec:
+  kubernetes:
+    minSupportedVersion: v1.19.0
+  cloudProvider:
+    - name: aws
+      enabled: true
+    - name: azure
+      enabled: true
+    - name: docker
+      enabled: false
+    - name: none
+      enabled: true
+  chartReference:
+    chart: csi-driver-smb
+    repo: https://raw.githubusercontent.com/kubernetes-csi/csi-driver-smb/master/charts
+    version: v0.7.0
+    values: ""
