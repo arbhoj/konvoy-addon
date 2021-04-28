@@ -30,5 +30,5 @@ spec:
     repo: https://raw.githubusercontent.com/arbhoj/kudo-repo/master
     version: 1.0.0
     parameters: |
-      host: argouat.sgicorp.spencergifts.com
-      konvoy_host: konuat.sgicorp.spencergifts.com    
+      host: env.sgicorp.spencergifts.com
+      konvoy_host: env.sgicorp.spencergifts.com    
