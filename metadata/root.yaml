@@ -1,11 +1,23 @@
+---
 smb-csi-driver:
   display_name: csi-driver-smb
   description: Driver for mounting SMB shared to PODs
   logo: csi-driver-smb/smb.png
-  category: volume
+  category: storage
   overview: csi-driver-smb/overview.md
   resources:
     links:
       - type: support
         title: Support Resources
         link: https://github.com/kubernetes-csi/csi-driver-smb
+argocd:
+  display_name: argocd
+  description: 
+  logo: argocd/argocd.png
+  category: Continuous Delivery
+  overview: argocd/overview.md
+  resources:
+    links:
+      - type: support
+        title: Support Resources
+        link: https://argocd-operator.readthedocs.io/en/latest/
