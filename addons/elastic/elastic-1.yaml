@@ -49,17 +49,33 @@ spec:
             set -o errexit
             set -o nounset
             set -o pipefail
-
             CLIENT_URL=http://{{ template "elasticsearch.client.fullname" . }}.platformservices.svc.cluster.local.:9200
             # Wait until client nodes accept requests.
             # This prevents data pods from getting into a long CrashLoopBackoff.
             echo "Waiting for client node service ..."
             while [[ "$(curl -s -o /dev/null -w '%{http_code}' -L ${CLIENT_URL}/_cluster/health)" != "200" ]]; do sleep 1; done
-
-            # Creating the index template: 'kubernetes_audit'
-            # Reduces the number of fields produced due to the indexing of the audit logs
-            # if template doesnt return 200, try to create it
-            if [[ "$(curl -s -o /dev/null -w '%{http_code}' -L ${CLIENT_URL}/_template/kubernetes_audit)" != "200" ]]; then
-              echo "Creating the index template: 'kubernetes_audit'"
-              RES_CREATE_TEMPLATE=$(curl -XPUT -s -o /dev/null -w '%{http_code}' ${CLIENT_URL}/_template/kubernetes_audit\
-                -H "Content-Type: application/json; charset=utf-8" \
+        persistence:
+          storageClass: elasticdata
+        replicas: 3
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 8192Mi
+          requests:
+            cpu: 1000m
+            memory: 4608Mi
+        updateStrategy:
+          type: RollingUpdate
+master:
+        heapSize: 1024m
+        persistence:
+          storageClass: elasticmaster
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 2048Mi
+          requests:
+            cpu: 500m
+            memory: 1536Mi
+        updateStrategy:
+          type: RollingUpdate
