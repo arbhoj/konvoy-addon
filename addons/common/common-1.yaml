@@ -5,7 +5,7 @@ metadata:
   name: common
   namespace: kubeaddons
   labels:
-    kubeaddons.mesosphere.io/name: envoy
+    kubeaddons.mesosphere.io/name: common
     # TODO: we're temporarily supporting dependency on an existing default storage class
     # on the cluster, this hack will trigger re-queue on Addons until one exists
     kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
@@ -25,9 +25,11 @@ spec:
     - name: none
       enabled: true
   chartReference:
-    chart: teams
+    chart: common
     repo: https://raw.githubusercontent.com/arbhoj/helm-images/master/custom-helm-charts/
     version: 0.1.0
     values: |
-      teams: 
-      - testone
+      dummy: value
+  requires:
+  - matchLabels:
+      kubeaddons.mesosphere.io/name: dex
