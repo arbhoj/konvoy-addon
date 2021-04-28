@@ -5,7 +5,7 @@ metadata:
   name: kibana-external
   namespace: platformservices
   labels:
-    kubeaddons.mesosphere.io/name: envoy
+    kubeaddons.mesosphere.io/name: kibana-external
     # TODO: we're temporarily supporting dependency on an existing default storage class
     # on the cluster, this hack will trigger re-queue on Addons until one exists
     kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
@@ -27,7 +27,7 @@ spec:
       enabled: true
   requires:
     - matchLabels:
-        kubeaddons.mesosphere.io/name: elasticsearchcustom
+        kubeaddons.mesosphere.io/name: elastic-external
   chartReference:
     chart: kibana
     repo: https://mesosphere.github.io/charts/stable
