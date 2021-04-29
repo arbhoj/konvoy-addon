@@ -6,9 +6,6 @@ metadata:
   namespace: kubeaddons
   labels:
     kubeaddons.mesosphere.io/name: common
-    # TODO: we're temporarily supporting dependency on an existing default storage class
-    # on the cluster, this hack will trigger re-queue on Addons until one exists
-    kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
   annotations:
     catalog.kubeaddons.mesosphere.io/addon-revision: "1.0.1-1"
     appversion.kubeaddons.mesosphere.io/common: "1.0.1"
@@ -33,5 +30,5 @@ spec:
   requires:
   - matchLabels:
       kubeaddons.mesosphere.io/name: dex
-      kubeaddons.mesosphere.io/name: velero
+  - matchLabels:
       kubeaddons.mesosphere.io/name: f5

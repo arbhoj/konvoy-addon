@@ -3,7 +3,7 @@ apiVersion: kubeaddons.mesosphere.io/v1beta1
 kind: Addon
 metadata:
   name: kibana-external
-  namespace: platformservices
+  namespace: customaddons
   labels:
     kubeaddons.mesosphere.io/name: kibana-external
     # TODO: we're temporarily supporting dependency on an existing default storage class
