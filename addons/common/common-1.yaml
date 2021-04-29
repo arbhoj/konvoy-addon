@@ -33,3 +33,4 @@ spec:
   requires:
   - matchLabels:
       kubeaddons.mesosphere.io/name: dex
+      kubeaddons.mesosphere.io/name: velero
