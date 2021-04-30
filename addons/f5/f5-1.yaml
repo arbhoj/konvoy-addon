@@ -42,8 +42,8 @@ spec:
         # NOTE: helm has difficulty with values using `-`; `_` are used for naming
         # and are replaced with `-` during rendering.
         # REQUIRED Params
-        bigip_url: 
-        bigip_partition:
+        bigip_url: 172.11.11.11 
+        bigip_partition: test
         # OPTIONAL PARAMS -- uncomment and provide values for those you wish to use.
         # verify_interval:
         # node-poll_interval:
