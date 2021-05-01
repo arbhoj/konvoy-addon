@@ -39,7 +39,7 @@ spec:
       files:
         kibana.yml:
           ## Default Kibana configuration from kibana-docker.
-          elasticsearch.hosts: ["http://elastic-ps-elasticsearch-client:9200"]
+          elasticsearch.hosts: ["http://elastic-external-elasticsearch-client:9200"]
           ## Ref: https://www.elastic.co/guide/en/kibana/current/settings.html
           server.rewriteBasePath: false
           #server.basePath: /ops/ps/kibana

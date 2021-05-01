@@ -79,5 +79,3 @@ spec:
             memory: 1536Mi
         updateStrategy:
           type: RollingUpdate
-              persistence:
-                storageClass: xsmall
