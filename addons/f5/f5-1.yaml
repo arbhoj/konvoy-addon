@@ -21,6 +21,8 @@ spec:
       enabled: false
     - name: none
       enabled: true
+    - name: vsphere
+      enabled: true 
   chartReference:
     chart: f5-bigip-ctlr
     repo: https://f5networks.github.io/charts/stable
