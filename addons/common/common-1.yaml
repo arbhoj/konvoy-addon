@@ -21,6 +21,8 @@ spec:
       enabled: false
     - name: none
       enabled: true
+    - name: vsphere
+      enabled: true       
   chartReference:
     chart: common
     repo: https://raw.githubusercontent.com/arbhoj/helm-images/master/custom-helm-charts/
