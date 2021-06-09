@@ -21,6 +21,8 @@ spec:
       enabled: false
     - name: none
       enabled: true
+    - name: vsphere
+      enabled: true
   chartReference:
     chart: common
     repo: http://custom-helm-charts.kube-system.svc
