@@ -23,7 +23,7 @@ spec:
       enabled: true
   chartReference:
     chart: common
-    repo: http://custom-helm-charts.kubeaddons.svc
+    repo: http://custom-helm-charts.kube-system.svc
     version: 0.1.0
     values: |
       dummy: value

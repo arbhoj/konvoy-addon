@@ -12,7 +12,7 @@ metadata:
 spec:
   chartReference:
     chart: metallb
-    repo: http://custom-helm-charts.kubeaddons.svc
+    repo: http://custom-helm-charts.kube-system.svc
     values: |
       ---
       controller:
