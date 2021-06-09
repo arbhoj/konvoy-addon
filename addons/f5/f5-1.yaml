@@ -82,4 +82,4 @@ spec:
         # requests:
         #  cpu: 100m
         #  memory: 128Mi
-      version: latest
+      version: v2.4.1
