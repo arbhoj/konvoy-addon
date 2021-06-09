@@ -39,6 +39,8 @@ spec:
   - enabled: false
     name: azure
   - enabled: true
+    name: aws
+  - enabled: true
     name: vsphere
     values: |
       configInline:
