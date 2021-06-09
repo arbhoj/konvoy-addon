@@ -12,7 +12,7 @@ metadata:
 spec:
   chartReference:
     chart: metallb
-    repo: https://raw.githubusercontent.com/arbhoj/helm-images/master/custom-helm-charts
+    repo: http://custom-helm-charts.kubeaddons.svc
     values: |
       ---
       controller:
@@ -38,7 +38,7 @@ spec:
   cloudProvider:
   - enabled: false
     name: azure
-  - enabled: false
+  - enabled: true
     name: vsphere
     values: |
       configInline:

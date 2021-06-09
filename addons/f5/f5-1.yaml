@@ -21,10 +21,12 @@ spec:
       enabled: false
     - name: none
       enabled: true
+    - name: vsphere
+      enabled: true
   chartReference:
     chart: f5-bigip-ctlr
-    repo: https://f5networks.github.io/charts/stable
-    version: 0.0.13
+    repo: http://custom-helm-charts.kubeaddons.svc
+    version: 0.0.14
     values: |
       bigip_login_secret: bigip-login
       rbac:
@@ -47,7 +49,7 @@ spec:
         # OPTIONAL PARAMS -- uncomment and provide values for those you wish to use.
         # verify_interval:
         # node-poll_interval:
-        log_level: debug
+        log_level: info
         # python_basedir: ~
         # VXLAN
         # openshift_sdn_name:

@@ -23,7 +23,7 @@ spec:
       enabled: true
   chartReference:
     chart: common
-    repo: https://raw.githubusercontent.com/arbhoj/helm-images/master/custom-helm-charts/
+    repo: http://custom-helm-charts.kubeaddons.svc
     version: 0.1.0
     values: |
       dummy: value
