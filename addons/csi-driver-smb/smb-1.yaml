@@ -28,6 +28,6 @@ spec:
   chartReference:
     chart: csi-driver-smb
     repo: https://raw.githubusercontent.com/kubernetes-csi/csi-driver-smb/master/charts
-    version: v0.7.0
+    version: v1.3.0
     values: |
       dummy: test 
